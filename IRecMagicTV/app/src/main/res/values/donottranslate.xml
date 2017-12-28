@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_logout" translateable="false">_logout</string>
+    <string name="pref_device" translateable="false">device</string>
+    <string name="pref_recordflush" translateable="false">recordflush</string>
+    <string name="pref_unlink" translateable="false">unlink</string>
+    <string name="pref_language" translateable="false">language</string>
+    <string name="pref_language_en" translateable="false">English</string>
+    <string name="pref_language_hk" translateable="false">中文</string>
+    <string name="sf_language_item" translateable="false">Language</string>
+    <string-array name="langugaes_val" translateable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

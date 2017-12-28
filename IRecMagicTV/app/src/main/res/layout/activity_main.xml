@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/root"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".MainActivity" tools:ignore="MergeRootFrame"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/container"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="false"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/buttonsLayout"
+        android:layout_below="@+id/container">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/programmes_128"
+            android:id="@+id/pgsButton"
+            android:layout_weight="1"
+            android:background="@drawable/tab_button_selector"
+            android:textColor="@color/tab_text_selector"
+            android:tag="ChannelListFragment"
+            android:onClick="tabButtonClick"
+            android:contentDescription="Programmes" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/recording_128"
+            android:id="@+id/recButton"
+            android:layout_weight="1"
+            android:background="@drawable/tab_button_selector"
+            android:textColor="@color/tab_text_selector"
+            android:tag="RecordingListFragment"
+            android:onClick="tabButtonClick"
+            android:contentDescription="Recordings" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/alarm_128"
+            android:id="@+id/altButton"
+            android:layout_weight="1"
+            android:background="@drawable/tab_button_selector"
+            android:textColor="@color/tab_text_selector"
+            android:tag="AlertListFragment"
+            android:onClick="tabButtonClick"
+            android:contentDescription="Alerts" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/settings_128"
+            android:id="@+id/optButton"
+            android:layout_weight="1"
+            android:background="@drawable/tab_button_selector"
+            android:textColor="@color/tab_text_selector"
+            android:tag="SettingsFragment"
+            android:onClick="tabButtonClick"
+            android:contentDescription="Settings" />
+    </LinearLayout>
+
+</LinearLayout>

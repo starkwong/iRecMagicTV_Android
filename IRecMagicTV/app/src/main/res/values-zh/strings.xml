@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MagicTV 易錄寶</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="pref_logout">_logout</string>
+    <string name="pref_device">device</string>
+    <string name="pref_recordflush">recordflush</string>
+    <string name="pref_unlink">unlink</string>
+    <string name="pref_unlink_yes">本端資料目前並未連結</string>
+    <string name="pref_unlink_no">本端資料目前已連結</string>
+    <string name="pref_language_auto">自動 (Auto)</string>
+
+    <string name="aea_start" formatted="false">%s (%s) 準備開始了。</string>
+    <string name="clf_login_title">登入</string>
+    <string name="clf_login_login">登入</string>
+    <string name="clf_show_all">顯示所有頻道</string>
+    <string name="clf_edit_favorites">編輯最愛頻道</string>
+    <string name="clf_create_favorites">建立最愛頻道清單</string>
+    <string name="clf_show_favorites">顯示最愛頻道</string>
+
+    <string name="flf_all_channels">所有頻道</string>
+    <string name="flf_favorite_channels">最愛頻道</string>
+    <string name="flf_save_message">儲存新的最愛頻道設定？</string>
+
+    <string name="plf_overlap" formatted="false">警告：此節目與 %s-%s 重疊</string>
+    <string name="plf_exist_title">錄影</string>
+    <string name="plf_exist_message">所選擇的節目已經排程錄影，仍要繼續？</string>
+    <string name="plf_exist2_title">通知</string>
+    <string name="plf_exist2_message">所選擇的節目已經排程通知，仍要繼續？</string>
+    <string name="plf_success2_message">已成功註冊通知。</string>
+    <string name="plf_info_title">錄影</string>
+    <string name="plf_info_error">無法取得選擇節目的資訊。</string>
+    <string name="plf_success_mesage">已成功註冊錄影。</string>
+    <string name="plf_record_error">無法註冊錄影：</string>
+    <string name="plf_info_prerecord" formatted="false">日期：%s\n時間：%s\n長度：%s\n名稱：%s\n\n若要錄影這個節目，請選擇錄影方法</string>
+    <string name="plf_info_normal" formatted="false">日期：%s\n時間：%s\n長度：%s\n名稱：%s\n\n%s</string>
+    <string name="plf_info_single">單次</string>
+    <string name="plf_info_repeat">重覆（未提供）</string>
+    <string name="plf_single">(單次)</string>
+    <string name="plf_multiple">(多次)</string>
+
+    <string name="sf_title">設定</string>
+    <string name="sf_logout">登出</string>
+    <string name="sf_logout_message">這樣將登出目前的帳號，若程式已連結時亦將在所有裝置中移除這些資料。如果您不想在所有裝置中同時登出，請先解除連結。</string>
+    <string name="sf_logout_clear_logout">清除並登出</string>
+    <string name="sf_unlink_local">這樣將僅從您的裝置清除所有清單。</string>
+    <string name="sf_unlink_all">這樣將從所有裝置清除所有清單。</string>
+    <string name="sf_unlink_message1">您可以選擇連結到其他裝置或清除此裝置上的清單。</string>
+    <string name="sf_unlink_link">連結</string>
+    <string name="sf_unlink_link_message">此裝置上的資料將被連結並取代其他裝置上的資料。</string>
+    <string name="sf_unlink_clear">清除</string>
+    <string name="sf_unlink_clear_relink">清除並重新連結</string>
+    <string name="sf_unlink_clear_relink_message">本端清單將被清除及以已連結的清單進行還原。</string>
+    <string name="sf_unlink_message2">您可以選擇解除與其他裝置間的連結，或清除所有裝置上的清單。</string>
+    <string name="sf_unlink_unlink">解除連結</string>
+    <string name="sf_unlink_unlink_message">此裝置上所進行的變更將不再與其他裝置共享。</string>
+
+
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="action_settings">設定</string>
+    <string name="login_alert_mobileno">流動電話號碼：</string>
+    <string name="login_alert_password">密碼：</string>
+    <string name="sf_logout_item">登出目前帳號</string>
+    <string name="sf_device_item">選擇裝置</string>
+    <string name="sf_flush_item">清空／連結資料</string>
+    <string name="recording_list_fragment_note1">這裡只會顯示從這個程式所排程的錄影節目。</string>
+    <string name="recording_list_fragment_note2">從這個清單中移除項目並不會從您的 MagicTV 裝置實際移除，您必須自行在裝置上移除。</string>
+    <string name="pref_about">_about</string>
+    <string name="sf_about">關於</string>
+    <string name="sf_restart">本程式將重新啟動以套用新的語言設定。\nThe application will be restarted to apply new language setting.</string>
+
+    <string-array name="weekdays">
+        <item>日</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+    </string-array>
+</resources>

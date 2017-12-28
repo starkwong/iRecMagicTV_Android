@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rec_text_normal">#444444</color>
+    <color name="rec_text_selected">#cc0000</color>
+    <color name="alt_text_normal">#444444</color>
+    <color name="alt_text_selected">#00cc00</color>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="TabButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/tab_button_selector</item>
+    </style>
+</resources>

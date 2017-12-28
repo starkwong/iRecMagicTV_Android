@@ -1,0 +1,1990 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=320">
+<title>Magic TV 遙距錄影</title>
+<style type="text/css" media="screen">
+@import "main.css";
+</style>
+<script type="text/javascript">
+function search_focus(el)
+{
+if(el.V) {
+if (el.value == el.V) {
+el.value = '';
+}
+} else {
+el.V = el.value;
+el.value = '';
+}
+}
+function setbg(color)
+{
+document.bgColor=color;
+document.body.style.backgroundColor=color;
+}
+function jump()
+{
+window.location='#jump';
+}
+function send_search(form)
+{
+var loginpage = "result-programme.php";
+var loc = loginpage + "?channelsel=" + 11 + "&keyword="+form.keyword.value;window.location.href = loc;
+}
+</script>
+</head>
+<body onload="jump();">
+<div id="container">
+<div id="toppanel" ><img src="images/mtvlogo.png" alt="Magic TV" width="55" height="76">
+<div id="toplinks" >
+<ul>
+<li><a href=unit-list.php>~MTV7000D</a></li>
+<li><a href=setlangENG.php >English</a></li>
+<li><a href=logout.php>登出</a></li>
+</ul>
+</div>
+<form id="chsearchform" action="result-programme.php" method="get">
+<div id="topsearch" >
+<input id="keyword" name="keyword" type="text" class="searchbar" value="節目搜索" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+<INPUT TYPE="image" ALIGN="left" SRC="images/search_button.png" HEIGHT="31" WIDTH="31" BORDER="0" ALT="Submit Form">
+</div>
+</form>
+</div>
+<div id="headline" >
+<div class="formbutton"><a class="buttonsmall" href=channel-list.php><span>返回</span></a>
+<center><h1> 本港台</h1></center>
+</div>
+</div>
+<!--begin days of the week-->
+<div class="days" >
+<ul>
+<li class="current"><a href=#Thu>四</a></li>
+<li><a href=#Fri>五</a></li>
+<li><a href=#Sat>六</a></li>
+<li><a href=#Sun>日</a></li>
+<li><a href=#Mon>一</a></li>
+<li><a href=#Tue>二</a></li>
+<li><a href=#Wed>三</a></li>
+</ul>
+</div>
+<!--end days of the week-->
+<ul id="proglist">
+<li class="first">
+<a name=Thu href="programme-info.php?channelsel=11&datetimesel=2014-12-31 17:35:00">
+<span class="progtime" >01:35</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >恩雨之聲 (粵/國)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2014-12-31 18:00:00">
+<span class="progtime" >02:00</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >計中計狀元財 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2014-12-31 18:30:00">
+<span class="progtime" >02:30</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >國際財經視野 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2014-12-31 19:00:00">
+<span class="progtime" >03:00</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >ATV 亞洲劇場: 非緣勿擾  結局篇 (粵/國)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2014-12-31 20:30:00">
+<span class="progtime" >04:30</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >司機大佬 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2014-12-31 21:30:00">
+<span class="progtime" >05:30</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >ATV粵曲會知音: 林家聲戲寶承傳系列 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2014-12-31 22:00:00">
+<span class="progtime" >06:00</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >平約瑟牧師 - 新造視頻 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2014-12-31 22:30:00">
+<span class="progtime" >06:30</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >亞洲早晨 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2014-12-31 23:15:00">
+<span class="progtime" >07:15</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2014-12-31 23:20:00">
+<span class="progtime" >07:20</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >爸爸兩邊走 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2014-12-31 23:30:00">
+<span class="progtime" >07:30</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >香港百人 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 00:35:00">
+<span class="progtime" >08:35</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >ATV焦點 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 00:45:00">
+<span class="progtime" >08:45</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >國際財經視野 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 01:15:00">
+<span class="progtime" >09:15</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >巴布熊貓成語系列 (R)(粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 01:45:00">
+<span class="progtime" >09:45</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >我們這一班 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 02:15:00">
+<span class="progtime" >10:15</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >夢月精靈 (R)(粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 02:45:00">
+<span class="progtime" >10:45</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >網球王子 (R)(粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 03:15:00">
+<span class="progtime" >11:15</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >把酒當歌 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 03:45:00">
+<span class="progtime" >11:45</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >星動亞洲 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 04:25:00">
+<span class="progtime" >12:25</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 04:30:00">
+<span class="progtime" >12:30</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >十二點半新聞 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 04:45:00">
+<span class="progtime" >12:45</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >天氣報告 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 04:50:00">
+<span class="progtime" >12:50</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >賽馬直擊<現場直播> (粵/英)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 09:55:00">
+<span class="progtime" >17:55</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 10:00:00">
+<span class="progtime" >18:00</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >六點鐘新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 10:20:00">
+<span class="progtime" >18:20</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >體育快訊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 10:25:00">
+<span class="progtime" >18:25</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >天氣報告 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 10:30:00">
+<span class="progtime" >18:30</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >ATV 每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 10:50:00">
+<span class="progtime" >18:50</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >左右紅藍綠 (港台節目) (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 11:00:00">
+<span class="progtime" >19:00</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >計中計狀元財 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 11:30:00">
+<span class="progtime" >19:30</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >ATV 亞洲劇場: 非緣勿擾  結局篇 (粵/國)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 13:00:00">
+<span class="progtime" >21:00</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >星動亞洲 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 13:30:00">
+<span class="progtime" >21:30</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >亞洲政策組 - 政改點樣改? (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 14:00:00">
+<span class="progtime" >22:00</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >回首2014 - 財經要覽 (粵/英)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 14:25:00">
+<span class="progtime" >22:25</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 14:30:00">
+<span class="progtime" >22:30</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >夜間新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 14:55:00">
+<span class="progtime" >22:55</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >七百萬人的聲音/ 馬上全接觸 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 15:10:00">
+<span class="progtime" >23:10</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >把酒當歌 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 15:40:00">
+<span class="progtime" >23:40</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >ATV 每日一歌 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 15:50:00">
+<span class="progtime" >23:50</span>
+<span class="progday"  >週四 1</span>
+<span class="progname" >賽後你點睇 (粵)(PG)</span>
+</a>
+</li>
+<li>
+<a name=Fri href="programme-info.php?channelsel=11&datetimesel=2015-01-01 17:15:00">
+<span class="progtime" >01:15</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >亞洲政策組 - 政改點樣改? (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 17:40:00">
+<span class="progtime" >01:40</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >計中計狀元財 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 18:10:00">
+<span class="progtime" >02:10</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >回首2014 - 財經要覽 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 18:40:00">
+<span class="progtime" >02:40</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >把酒當歌 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 19:10:00">
+<span class="progtime" >03:10</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >ATV 亞洲劇場: 非緣勿擾　結局篇 (粵/國)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 20:35:00">
+<span class="progtime" >04:35</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >司機大佬 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 21:30:00">
+<span class="progtime" >05:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >ATV粵曲會知音: 林家聲戲寶承傳系列 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 22:00:00">
+<span class="progtime" >06:00</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >平約瑟牧師 - 新造視頻 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 22:30:00">
+<span class="progtime" >06:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >亞洲早晨 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 23:15:00">
+<span class="progtime" >07:15</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 23:20:00">
+<span class="progtime" >07:20</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >爸爸兩邊走 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-01 23:30:00">
+<span class="progtime" >07:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >香港百人 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 00:30:00">
+<span class="progtime" >08:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >ATV 每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 00:45:00">
+<span class="progtime" >08:45</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >回首2014 - 財經要覽 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 01:15:00">
+<span class="progtime" >09:15</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >理財博客之即市錦囊 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 02:20:00">
+<span class="progtime" >10:20</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >我們這一班 (R)(粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 02:50:00">
+<span class="progtime" >10:50</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >ATV 每日一歌 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 03:00:00">
+<span class="progtime" >11:00</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >武林世界之英雄有夢: 少年黃飛鴻 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 04:20:00">
+<span class="progtime" >12:20</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >馬上全接觸/當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 04:30:00">
+<span class="progtime" >12:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >十二點半新聞 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 04:55:00">
+<span class="progtime" >12:55</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >天氣報告 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 05:00:00">
+<span class="progtime" >13:00</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >理財博客之投資多面睇 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 05:45:00">
+<span class="progtime" >13:45</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >回首2014 - 全球風雲 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 06:15:00">
+<span class="progtime" >14:15</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >ATV 每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 06:30:00">
+<span class="progtime" >14:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >我愛下午茶 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 07:00:00">
+<span class="progtime" >15:00</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >左右紅藍綠 (港台節目) (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 07:05:00">
+<span class="progtime" >15:05</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >把酒當歌 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 07:35:00">
+<span class="progtime" >15:35</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >星動亞洲 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 08:00:00">
+<span class="progtime" >16:00</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >我們這一班 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 08:30:00">
+<span class="progtime" >16:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >夢月精靈 (R)(粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 09:00:00">
+<span class="progtime" >17:00</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >網球王子 (R)(粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 09:30:00">
+<span class="progtime" >17:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >悠遊曲江 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 09:45:00">
+<span class="progtime" >17:45</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >ATV 每日一歌 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 09:55:00">
+<span class="progtime" >17:55</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 10:00:00">
+<span class="progtime" >18:00</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >六點鐘新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 10:20:00">
+<span class="progtime" >18:20</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >ATV焦點 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 10:30:00">
+<span class="progtime" >18:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >經濟快訊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 10:35:00">
+<span class="progtime" >18:35</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >體育快訊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 10:40:00">
+<span class="progtime" >18:40</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >天氣報告 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 10:45:00">
+<span class="progtime" >18:45</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >ATV 每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 11:00:00">
+<span class="progtime" >19:00</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >計中計狀元財 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 11:30:00">
+<span class="progtime" >19:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >ATV 亞洲劇場: 非緣勿擾 大結局 (粵/國)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 13:00:00">
+<span class="progtime" >21:00</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >星動亞洲 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 13:25:00">
+<span class="progtime" >21:25</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >名人名錶之財"息"兼收 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 13:30:00">
+<span class="progtime" >21:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >亞洲政策組 - 政改點樣改? (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 14:00:00">
+<span class="progtime" >22:00</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >國際財經視野 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 14:25:00">
+<span class="progtime" >22:25</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 14:30:00">
+<span class="progtime" >22:30</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >夜間新聞 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 14:55:00">
+<span class="progtime" >22:55</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >ATV焦點 /馬上全接觸 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 15:10:00">
+<span class="progtime" >23:10</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >把酒當歌 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 15:40:00">
+<span class="progtime" >23:40</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >ATV 每日一歌 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 15:50:00">
+<span class="progtime" >23:50</span>
+<span class="progday"  >週五 2</span>
+<span class="progname" >早着先機 (粵)</span>
+</a>
+</li>
+<li>
+<a name=Sat href="programme-info.php?channelsel=11&datetimesel=2015-01-02 17:20:00">
+<span class="progtime" >01:20</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >亞洲政策組 - 政改點樣改? (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 17:45:00">
+<span class="progtime" >01:45</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >計中計狀元財 (粵/國)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 18:15:00">
+<span class="progtime" >02:15</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >國際財經視野 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 18:40:00">
+<span class="progtime" >02:40</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >把酒當歌 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 19:10:00">
+<span class="progtime" >03:10</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >ATV 亞洲劇場: 非緣勿擾  大結局 (粵/國)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 20:35:00">
+<span class="progtime" >04:35</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >司機大佬 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 21:30:00">
+<span class="progtime" >05:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >ATV粵曲會知音: 林家聲戲寶承傳系列 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 22:00:00">
+<span class="progtime" >06:00</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >根踪香港 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 22:30:00">
+<span class="progtime" >06:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >亞洲早晨 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 23:15:00">
+<span class="progtime" >07:15</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 23:20:00">
+<span class="progtime" >07:20</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >爸爸兩邊走 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-02 23:30:00">
+<span class="progtime" >07:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >香港百人 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 00:30:00">
+<span class="progtime" >08:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >生活在耆中 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 01:00:00">
+<span class="progtime" >09:00</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >地胆 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 01:30:00">
+<span class="progtime" >09:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >青協數碼青年: 防暴於微(第三集) (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 02:00:00">
+<span class="progtime" >10:00</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >青春聯合體 (港台節目) (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 03:00:00">
+<span class="progtime" >11:00</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >我家在香港 (港台節目) (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 03:30:00">
+<span class="progtime" >11:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >恩雨之聲 (粵/國)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 03:55:00">
+<span class="progtime" >11:55</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >占盡先機 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 04:00:00">
+<span class="progtime" >12:00</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >ATV 每日一歌 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 04:10:00">
+<span class="progtime" >12:10</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >魅動亞洲 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 04:20:00">
+<span class="progtime" >12:20</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >馬上全接觸 / 當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 04:30:00">
+<span class="progtime" >12:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >十二點半新聞 / 天氣報告 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 04:50:00">
+<span class="progtime" >12:50</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >ATV 亞洲劇場: 愛上女主播 (粵/國)(PG)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 07:30:00">
+<span class="progtime" >15:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >回首2014 - 財經要覽 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 08:00:00">
+<span class="progtime" >16:00</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >我們這一班 (周六版) (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 08:30:00">
+<span class="progtime" >16:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >百變雙子星 (R)(粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 09:00:00">
+<span class="progtime" >17:00</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >冒險王比特 EX (R)(粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 09:30:00">
+<span class="progtime" >17:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >ATV粵曲會知音 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 09:55:00">
+<span class="progtime" >17:55</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 10:00:00">
+<span class="progtime" >18:00</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >六點鐘新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 10:25:00">
+<span class="progtime" >18:25</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >體育快訊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 10:30:00">
+<span class="progtime" >18:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >新聞故事 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 10:35:00">
+<span class="progtime" >18:35</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >體育快訊 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 10:40:00">
+<span class="progtime" >18:40</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >ATV每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 11:00:00">
+<span class="progtime" >19:00</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >警訊(港台節目) (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 11:30:00">
+<span class="progtime" >19:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >窗外有藍天(港台節目) (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 12:30:00">
+<span class="progtime" >20:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >澳門 澳門 (粵/國)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 13:00:00">
+<span class="progtime" >21:00</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >Hot Topic / 時事追擊 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 13:30:00">
+<span class="progtime" >21:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >六合彩-新年金多寶 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 13:35:00">
+<span class="progtime" >21:35</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >高志森微博 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 14:30:00">
+<span class="progtime" >22:30</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >鄧小平誕辰110周年: 小平與香港 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 15:00:00">
+<span class="progtime" >23:00</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >Sports@TV (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 15:13:00">
+<span class="progtime" >23:13</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 15:15:00">
+<span class="progtime" >23:15</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >夜間新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 15:40:00">
+<span class="progtime" >23:40</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >ATV每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 15:50:00">
+<span class="progtime" >23:50</span>
+<span class="progday"  >週六 3</span>
+<span class="progname" >胆識過人 (粵)</span>
+</a>
+</li>
+<li>
+<a name=Sun href="programme-info.php?channelsel=11&datetimesel=2015-01-03 17:30:00">
+<span class="progtime" >01:30</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >高志森微博 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 18:25:00">
+<span class="progtime" >02:25</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >鄧小平誕辰110周年:小平與香港 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 18:55:00">
+<span class="progtime" >02:55</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >澳門 澳門 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 19:25:00">
+<span class="progtime" >03:25</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >Sports@TV (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 19:40:00">
+<span class="progtime" >03:40</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >盲俠金魚飛天豬 (粵/國)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 21:30:00">
+<span class="progtime" >05:30</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >時事追擊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 22:00:00">
+<span class="progtime" >06:00</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >廟街豪情 (粵)(PG)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 23:30:00">
+<span class="progtime" >07:30</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >大遊俠 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-03 23:55:00">
+<span class="progtime" >07:55</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 00:00:00">
+<span class="progtime" >08:00</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >生活在耆中 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 00:30:00">
+<span class="progtime" >08:30</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >ATV粵曲會知音 (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 01:00:00">
+<span class="progtime" >09:00</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >勁爆倉鼠樂隊 (R)(粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 01:30:00">
+<span class="progtime" >09:30</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >我們這一班 (周日版) (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 02:00:00">
+<span class="progtime" >10:00</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >爆笑王子逃亡記 (R)(粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 03:00:00">
+<span class="progtime" >11:00</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >見面 見香港 (港台節目) (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 03:05:00">
+<span class="progtime" >11:05</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >平約瑟牧師 - 新造視頻 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 03:35:00">
+<span class="progtime" >11:35</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >高志森微博 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 04:25:00">
+<span class="progtime" >12:25</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 04:30:00">
+<span class="progtime" >12:30</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >十二點半新聞 / 天氣報告 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 04:50:00">
+<span class="progtime" >12:50</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >賽馬直擊 <現場直播> (粵/英)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 09:55:00">
+<span class="progtime" >17:55</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 10:00:00">
+<span class="progtime" >18:00</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >六點鐘新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 10:25:00">
+<span class="progtime" >18:25</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >體育快訊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 10:30:00">
+<span class="progtime" >18:30</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >新聞故事 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 10:35:00">
+<span class="progtime" >18:35</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >體育快訊 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 10:40:00">
+<span class="progtime" >18:40</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >ATV 每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 11:00:00">
+<span class="progtime" >19:00</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >好想藝術(港台節目) (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 11:30:00">
+<span class="progtime" >19:30</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >IT行者(港台節目) (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 12:00:00">
+<span class="progtime" >20:00</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >嶺南文化之旅 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 12:30:00">
+<span class="progtime" >20:30</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >風雲大事一百年: 劃時代搖滾: The Beatles (粵/英)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 13:30:00">
+<span class="progtime" >21:30</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >得意羊羊迎新春 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 14:30:00">
+<span class="progtime" >22:30</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >金錢世界 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 15:00:00">
+<span class="progtime" >23:00</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >Sports@TV (粵)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 15:13:00">
+<span class="progtime" >23:13</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >當年今日 (粵)(S)</span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 15:15:00">
+<span class="progtime" >23:15</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >夜間新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 15:40:00">
+<span class="progtime" >23:40</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >ATV 每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 15:50:00">
+<span class="progtime" >23:50</span>
+<span class="progday"  >週日 4</span>
+<span class="progname" >賽後你點睇 (粵)</span>
+</a>
+</li>
+<li>
+<a name=Mon href="programme-info.php?channelsel=11&datetimesel=2015-01-04 17:10:00">
+<span class="progtime" >01:10</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >風雲大事一百年: 劃時代搖滾: The Beatles (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 18:10:00">
+<span class="progtime" >02:10</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >得意羊羊迎新春 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 19:10:00">
+<span class="progtime" >03:10</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >嶺南文化之旅 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 19:40:00">
+<span class="progtime" >03:40</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >盲俠金魚飛天豬 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 21:30:00">
+<span class="progtime" >05:30</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >金錢世界 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 22:00:00">
+<span class="progtime" >06:00</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >平約瑟牧師 - 新造視頻 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 22:30:00">
+<span class="progtime" >06:30</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >爸爸兩邊走 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 23:15:00">
+<span class="progtime" >07:15</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >當年今日 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 23:20:00">
+<span class="progtime" >07:20</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >爸爸兩邊走 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-04 23:30:00">
+<span class="progtime" >07:30</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >香港百人 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 00:30:00">
+<span class="progtime" >08:30</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >ATV焦點 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 00:45:00">
+<span class="progtime" >08:45</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >亞視百人 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 01:15:00">
+<span class="progtime" >09:15</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >理財博客之即市錦囊 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 02:20:00">
+<span class="progtime" >10:20</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >我們這一班 (R)(粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 02:50:00">
+<span class="progtime" >10:50</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >武林世界之英雄有夢: 少年黃飛鴻 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 04:25:00">
+<span class="progtime" >12:25</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >當年今日 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 04:30:00">
+<span class="progtime" >12:30</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >十二點半新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 04:50:00">
+<span class="progtime" >12:50</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >經濟快訊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 04:55:00">
+<span class="progtime" >12:55</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >天氣報告 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 05:00:00">
+<span class="progtime" >13:00</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >理財博客之投資多面睇 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 05:45:00">
+<span class="progtime" >13:45</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >再造繁榮 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 06:30:00">
+<span class="progtime" >14:30</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >我愛下午茶 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 07:00:00">
+<span class="progtime" >15:00</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >左右紅藍綠 (港台節目) (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 07:05:00">
+<span class="progtime" >15:05</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >把酒當歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 07:35:00">
+<span class="progtime" >15:35</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >親親,親人 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 08:00:00">
+<span class="progtime" >16:00</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >我們這一班 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 08:30:00">
+<span class="progtime" >16:30</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >夢月精靈 (R)(粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 09:00:00">
+<span class="progtime" >17:00</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >網球王子 (R)(粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 09:30:00">
+<span class="progtime" >17:30</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >Sports@TV (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 09:55:00">
+<span class="progtime" >17:55</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >當年今日 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 10:00:00">
+<span class="progtime" >18:00</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >六點鐘新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 10:20:00">
+<span class="progtime" >18:20</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >經濟快訊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 10:25:00">
+<span class="progtime" >18:25</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >體育快訊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 10:30:00">
+<span class="progtime" >18:30</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >天氣報告 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 10:35:00">
+<span class="progtime" >18:35</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >ATV這一家 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 10:45:00">
+<span class="progtime" >18:45</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >香港百人 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 11:00:00">
+<span class="progtime" >19:00</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >計中計狀元財 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 12:00:00">
+<span class="progtime" >20:00</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >萬家燈火 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 12:55:00">
+<span class="progtime" >20:55</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >名人名錶之財"息"兼收 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 13:00:00">
+<span class="progtime" >21:00</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >鄰居冤家 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 14:00:00">
+<span class="progtime" >22:00</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >國際財經視野 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 14:25:00">
+<span class="progtime" >22:25</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >當年今日 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 14:30:00">
+<span class="progtime" >22:30</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >夜間新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 14:55:00">
+<span class="progtime" >22:55</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >ATV這一家 / 馬上全接觸 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 15:05:00">
+<span class="progtime" >23:05</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >把酒當歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 15:40:00">
+<span class="progtime" >23:40</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >ATV 每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 15:50:00">
+<span class="progtime" >23:50</span>
+<span class="progday"  >週一 5</span>
+<span class="progname" >早着先機 (粵) </span>
+</a>
+</li>
+<li>
+<a name=Tue href="programme-info.php?channelsel=11&datetimesel=2015-01-05 17:05:00">
+<span class="progtime" >01:05</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >計中計狀元財 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 18:05:00">
+<span class="progtime" >02:05</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >把酒當歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 18:35:00">
+<span class="progtime" >02:35</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >鄰居冤家 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 19:30:00">
+<span class="progtime" >03:30</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >鄧小平誕辰110周年:小平與香港 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 20:00:00">
+<span class="progtime" >04:00</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >蘇超狂熱: 基爾馬諾克 對 些路迪<現場直播> (粵/英) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 21:45:00">
+<span class="progtime" >05:45</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >ATV 每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 22:00:00">
+<span class="progtime" >06:00</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >平約瑟牧師 - 新造視頻 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 22:30:00">
+<span class="progtime" >06:30</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >爸爸兩邊走 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 23:15:00">
+<span class="progtime" >07:15</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >當年今日 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 23:20:00">
+<span class="progtime" >07:20</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >爸爸兩邊走 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-05 23:30:00">
+<span class="progtime" >07:30</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >香港百人 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 00:30:00">
+<span class="progtime" >08:30</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >ATV這一家 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 00:45:00">
+<span class="progtime" >08:45</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >亞視百人 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 01:15:00">
+<span class="progtime" >09:15</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >理財博客之即市錦囊 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 02:20:00">
+<span class="progtime" >10:20</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >我們這一班 (R)(粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 02:50:00">
+<span class="progtime" >10:50</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >武林世界之英雄有夢: 少年黃飛鴻 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 04:25:00">
+<span class="progtime" >12:25</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >當年今日 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 04:30:00">
+<span class="progtime" >12:30</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >十二點半新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 04:50:00">
+<span class="progtime" >12:50</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >經濟快訊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 04:55:00">
+<span class="progtime" >12:55</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >天氣報告 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 05:00:00">
+<span class="progtime" >13:00</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >理財博客之投資多面睇 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 05:45:00">
+<span class="progtime" >13:45</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >再造繁榮 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 06:30:00">
+<span class="progtime" >14:30</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >我愛下午茶 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 07:00:00">
+<span class="progtime" >15:00</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >左右紅藍綠 (港台節目) (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 07:05:00">
+<span class="progtime" >15:05</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >把酒當歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 07:35:00">
+<span class="progtime" >15:35</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >親親,親人 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 08:00:00">
+<span class="progtime" >16:00</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >我們這一班 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 08:30:00">
+<span class="progtime" >16:30</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >夢月精靈 (R)(粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 09:00:00">
+<span class="progtime" >17:00</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >網球王子 (R)(粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 09:30:00">
+<span class="progtime" >17:30</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >悠遊曲江 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 09:45:00">
+<span class="progtime" >17:45</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >ATV 每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 09:55:00">
+<span class="progtime" >17:55</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >當年今日 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 10:00:00">
+<span class="progtime" >18:00</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >六點鐘新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 10:20:00">
+<span class="progtime" >18:20</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >經濟快訊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 10:25:00">
+<span class="progtime" >18:25</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >體育快訊 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 10:30:00">
+<span class="progtime" >18:30</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >天氣報告 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 10:35:00">
+<span class="progtime" >18:35</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >ATV這一家 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 10:45:00">
+<span class="progtime" >18:45</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >香港百人 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 11:00:00">
+<span class="progtime" >19:00</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >計中計狀元財 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 12:00:00">
+<span class="progtime" >20:00</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >萬家燈火 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 13:00:00">
+<span class="progtime" >21:00</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >鄰居冤家 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 13:30:00">
+<span class="progtime" >21:30</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >六合彩 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 13:35:00">
+<span class="progtime" >21:35</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >鄰居冤家 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 14:00:00">
+<span class="progtime" >22:00</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >國際財經視野 (粵) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 14:25:00">
+<span class="progtime" >22:25</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >當年今日 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 14:30:00">
+<span class="progtime" >22:30</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >夜間新聞 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 14:55:00">
+<span class="progtime" >22:55</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >ATV這一家 / 馬上全接觸 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 15:05:00">
+<span class="progtime" >23:05</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >把酒當歌 (粵)(S) </span>
+</a>
+</li>
+<li>
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 15:40:00">
+<span class="progtime" >23:40</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >ATV 每日一歌 (粵)(S) </span>
+</a>
+</li>
+<li class="last">
+<a href="programme-info.php?channelsel=11&datetimesel=2015-01-06 15:50:00">
+<span class="progtime" >23:50</span>
+<span class="progday"  >週二 6</span>
+<span class="progname" >胆識過人 (粵) </span>
+</a>
+</li>
+</ul>
+<div id="footer"><a href=http://www.magictv.com/hk/zh-b5/index.html>&copy; 視科系統有限公司</a></div>
+</div>
+</body>
+</html>

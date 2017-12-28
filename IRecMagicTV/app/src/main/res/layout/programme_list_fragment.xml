@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/channel_list_search_bar" />
+
+    <LinearLayout
+        android:id="@+id/dowLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/sunButton"
+            android:layout_weight="1"
+            android:background="@drawable/tab_button_selector"
+            android:textColor="@color/tab_text_selector"
+            android:tag="1" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/monButton"
+            android:layout_weight="1"
+            android:background="@drawable/tab_button_selector"
+            android:textColor="@color/tab_text_selector"
+            android:tag="2" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/tueButton"
+            android:layout_weight="1"
+            android:background="@drawable/tab_button_selector"
+            android:textColor="@color/tab_text_selector"
+            android:tag="3" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/wedButton"
+            android:layout_weight="1"
+            android:background="@drawable/tab_button_selector"
+            android:textColor="@color/tab_text_selector"
+            android:tag="4" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/thuButton"
+            android:layout_weight="1"
+            android:background="@drawable/tab_button_selector"
+            android:textColor="@color/tab_text_selector"
+            android:tag="5" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/friButton"
+            android:layout_weight="1"
+            android:background="@drawable/tab_button_selector"
+            android:textColor="@color/tab_text_selector"
+            android:tag="6" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/satButton"
+            android:layout_weight="1"
+            android:background="@drawable/tab_button_selector"
+            android:textColor="@color/tab_text_selector"
+            android:tag="7" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@android:id/list"
+        android:layout_weight="1" />
+</LinearLayout>

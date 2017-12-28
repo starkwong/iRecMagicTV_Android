@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MagicTV Easy Recorder</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="pref_unlink_yes">Local data is currently unlinked</string>
+    <string name="pref_unlink_no">Local data is currently linked</string>
+    <string name="pref_language_auto">Automatic</string>
+
+    <string name="aea_start" formatted="false">%s (%s) is about to start.</string>
+    <string name="clf_login_title">Login</string>
+    <string name="clf_login_login">Login</string>
+    <string name="clf_show_all">Show All Channels</string>
+    <string name="clf_edit_favorites">Edit Favorites</string>
+    <string name="clf_create_favorites">Create Favorites</string>
+    <string name="clf_show_favorites">Show Favorites</string>
+
+    <string name="flf_all_channels">All Channels</string>
+    <string name="flf_favorite_channels">Favorite Channels</string>
+    <string name="flf_save_message">Save new favorite channels settings?</string>
+
+    <string name="plf_overlap" formatted="false">Warning: This programme overlaps with %s-%s</string>
+    <string name="plf_exist_title">Record</string>
+    <string name="plf_exist_message">The selected programme already scheduled for recording. Still proceed?</string>
+    <string name="plf_exist2_title">Alert</string>
+    <string name="plf_exist2_message">The selected programme already scheduled for alert. Still proceed?</string>
+    <string name="plf_success2_message">Alert registered successfully</string>
+    <string name="plf_info_title">Recording</string>
+    <string name="plf_info_error">Unable to retrieve information for selected programme.</string>
+    <string name="plf_success_mesage">Recording registered successfully</string>
+    <string name="plf_record_error">Unable to register recording:</string>
+    <string name="plf_info_prerecord" formatted="false">Date: %s\nTime: %s\nDuration: %s\nName: %s\n\nTo recording the programme, select a recording method</string>
+    <string name="plf_info_normal" formatted="false">Date: %s\nTime: %s\nDuration: %s\nName: %s\n\n%s</string>
+    <string name="plf_info_single">Single</string>
+    <string name="plf_info_repeat">Repeat (N/A)</string>
+    <string name="plf_single">(Single)</string>
+    <string name="plf_multiple">(Multiple)</string>
+
+    <string name="sf_title">Settings</string>
+    <string name="sf_logout">Logout</string>
+    <string name="sf_logout_message">This will logout current account and remove all data in all devices if linked. If you don\'t want to remove from all devices, please unlink first.</string>
+    <string name="sf_logout_clear_logout">Clear and Logout</string>
+    <string name="sf_unlink_local">This will clear all lists from your device only.</string>
+    <string name="sf_unlink_all">This will clear all lists from all devices.</string>
+    <string name="sf_unlink_message1">You an either link with other devices or to clear the history on this device.</string>
+    <string name="sf_unlink_link">Link</string>
+    <string name="sf_unlink_link_message">The data will be linked across devices and replaced with the copy in this device.</string>
+    <string name="sf_unlink_clear">Clear</string>
+    <string name="sf_unlink_clear_relink">Clear and Relink</string>
+    <string name="sf_unlink_clear_relink_message">The local history will be cleared and the linked history will be restored.</string>
+    <string name="sf_unlink_message2">You an either unlink from other devices or to clear the history on all devices.</string>
+    <string name="sf_unlink_unlink">Unlink</string>
+    <string name="sf_unlink_unlink_message">Changes from this devices will no longer be shared with other devices.</string>
+    <string name="sf_restart">The application will be restarted to apply new language setting.</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="action_settings">Settings</string>
+    <string name="login_alert_mobileno">Mobile Number:</string>
+    <string name="login_alert_password">Password:</string>
+    <string name="sf_logout_item">Logout Current User</string>
+    <string name="sf_device_item">Select Device</string>
+    <string name="sf_flush_item">Flush/Link Data</string>
+    <string name="recording_list_fragment_note1">Only recordings scheduled in this app will be displayed.</string>
+    <string name="recording_list_fragment_note2">Removing items from this list does not remove from your MagicTV device. You must remove them manually.</string>
+    <string name="pref_about">_about</string>
+    <string name="sf_about">About</string>
+    <string-array name="weekdays">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </string-array>
+    <string-array name="langugaes">
+        <item>@string/pref_language_auto</item>
+        <item>@string/pref_language_en</item>
+        <item>@string/pref_language_hk</item>
+    </string-array>
+</resources>

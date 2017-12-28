@@ -1,0 +1,2891 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=320">
+<title>Magic TV 遙距錄影</title>
+<style type="text/css" media="screen">
+@import "main.css";
+</style>
+</head>
+<body onload="jump();">
+   <script type=text/javascript>
+
+function send_search(form)
+{
+var loginpage = "result-channel.php";
+var loc = loginpage + "?keyword="+form.keyword.value;
+//window.location.href = loc;
+//window.status = "Try me";
+
+
+return true;
+
+}
+function submitenter(e)
+{
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+
+if (keycode == 13)
+   {
+return true;
+
+   }
+else
+{
+//document.writeln("false");
+return false;
+}
+}
+function jump()
+{
+//window.location.reload(true);
+window.location='#jump';
+return true;
+}
+</script>
+   <div id="container">
+<div id="toppanel"><img src="images/mtvlogo.png" alt="Magic TV" width="55" height="76">
+<div id="toplinks">
+<ul>
+<li><a href=unit-list.php>~MTV7000D</a></li>
+<li><a href=setlangENG.php >English</a></li>
+<li><a href=logout.php>登出</a></li>
+</ul>
+</div>
+<form id="chsearchform" action="result-channel.php" method="get">
+<div id="topsearch">
+<input id="keyword" name="keyword" type="text" class="searchbar" value="頻道搜索"  onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+<INPUT TYPE="image" ALIGN="left" SRC="images/search_button.png" HEIGHT="31" WIDTH="31" BORDER="0" ALT="Submit Form">
+</div>
+</form>
+</div>
+<div id="headline">
+<h1>頻道</h1>
+</div>
+<div class="channeljump">
+<ul>
+<li><a href="?chnljmp=atv"><img src="images/channelListJumpLogo_atv.png" alt="aTV"></a></li>
+<li><a href="?chnljmp=rthk"><img src="images/channelListJumpLogo_rthk.png" alt="RTHK"></a></li>
+<li><a href="?chnljmp=tvb"><img src="images/channelListJumpLogo_tvb.png" alt="TVB"></a></li>
+<li><a href="?chnljmp=nowtv"><img src="images/channelListJumpLogo_nowtv.png" alt="Now TV"></a></li>
+<li><a href="?chnljmp=cabletv"><img src="images/channelListJumpLogo_cabletv.png" alt="Cable TV"></a></li>
+</ul>
+</div>
+<ul id="channellist">
+<li class="first">
+<a href=programme-list.php?channelsel=11>
+<span class="chnumber">011</span>
+<span class="chlogo"><img src="images/channelListLogo_atv.png" alt="ATV"></span>
+<span class="chname">本港台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=12>
+<span class="chnumber">012</span>
+<span class="chlogo"><img src="images/channelListLogo_atv.png" alt="ATV"></span>
+<span class="chname">亞洲台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=13>
+<span class="chnumber">013</span>
+<span class="chlogo"><img src="images/channelListLogo_atv.png" alt="ATV"></span>
+<span class="chname">歲月留聲</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=15>
+<span class="chnumber">015</span>
+<span class="chlogo"><img src="images/channelListLogo_atv.png" alt="ATV"></span>
+<span class="chname">CCTV-1 綜合頻道 </span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=16>
+<span class="chnumber">016</span>
+<span class="chlogo"><img src="images/channelListLogo_atv.png" alt="ATV"></span>
+<span class="chname">國際台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=17>
+<span class="chnumber">017</span>
+<span class="chlogo"><img src="images/channelListLogo_atv.png" alt="ATV"></span>
+<span class="chname">深圳衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=31>
+<span class="chnumber">031</span>
+<span class="chlogo"><img src="images/channelListLogo_rthk.png" alt="RTHK"></span>
+<span class="chname">港台電視 31</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=32>
+<span class="chnumber">032</span>
+<span class="chlogo"><img src="images/channelListLogo_rthk.png" alt="RTHK"></span>
+<span class="chname">港台電視 32</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=33>
+<span class="chnumber">033</span>
+<span class="chlogo"><img src="images/channelListLogo_rthk.png" alt="RTHK"></span>
+<span class="chname">紀錄國際頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=81>
+<span class="chnumber">081</span>
+<span class="chlogo"><img src="images/channelListLogo_tvb.png" alt="TVB"></span>
+<span class="chname">翡翠台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=82>
+<span class="chnumber">082</span>
+<span class="chlogo"><img src="images/channelListLogo_tvb.png" alt="TVB"></span>
+<span class="chname">J2</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=83>
+<span class="chnumber">083</span>
+<span class="chlogo"><img src="images/channelListLogo_tvb.png" alt="TVB"></span>
+<span class="chname">互動新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=84>
+<span class="chnumber">084</span>
+<span class="chlogo"><img src="images/channelListLogo_tvb.png" alt="TVB"></span>
+<span class="chname">明珠台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=85>
+<span class="chnumber">085</span>
+<span class="chlogo"><img src="images/channelListLogo_tvb.png" alt="TVB"></span>
+<span class="chname">高清翡翠台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4196>
+<span class="chnumber">100</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now香港台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4197>
+<span class="chnumber">101</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now101台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4198>
+<span class="chnumber">102</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now觀星台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4199>
+<span class="chnumber">103</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now芒果台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4201>
+<span class="chnumber">105</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now海潤台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4202>
+<span class="chnumber">106</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now 影視點播站</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4206>
+<span class="chnumber">110</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">HBO HD</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4207>
+<span class="chnumber">111</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">HBO Hits</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4208>
+<span class="chnumber">112</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">HBO Family</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4209>
+<span class="chnumber">113</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">HBO SigPlus1</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4210>
+<span class="chnumber">114</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">HBO Sig</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4211>
+<span class="chnumber">115</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">HBO</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4212>
+<span class="chnumber">116</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">CINEMAX</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4213>
+<span class="chnumber">117</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FOXMov</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4214>
+<span class="chnumber">118</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">電影預告頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4215>
+<span class="chnumber">119</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TCM</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4218>
+<span class="chnumber">122</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">MGM</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4219>
+<span class="chnumber">123</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">DIVA</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4220>
+<span class="chnumber">124</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Syfy</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4221>
+<span class="chnumber">125</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Thrill</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4224>
+<span class="chnumber">128</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FOX Family M</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4228>
+<span class="chnumber">132</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">MOVIE MOVIE</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4229>
+<span class="chnumber">133</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now 爆谷台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4230>
+<span class="chnumber">134</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">中國電影頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4233>
+<span class="chnumber">137</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">.</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4234>
+<span class="chnumber">138</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">美亞電視劇台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4235>
+<span class="chnumber">139</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">衛視電影台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4236>
+<span class="chnumber">140</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">衛視卡式台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4243>
+<span class="chnumber">147</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">.</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4244>
+<span class="chnumber">148</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">.</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4304>
+<span class="chnumber">208</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Discovery HD</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4305>
+<span class="chnumber">209</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Discovery </span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4306>
+<span class="chnumber">210</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">動物星球頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4307>
+<span class="chnumber">211</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">科學頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4308>
+<span class="chnumber">212</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">DMAX</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4309>
+<span class="chnumber">213</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TLC</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4310>
+<span class="chnumber">214</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">EVE</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4311>
+<span class="chnumber">215</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">NatGeo</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4312>
+<span class="chnumber">216</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">NG野生頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4313>
+<span class="chnumber">217</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">國家地理悠人頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4314>
+<span class="chnumber">218</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">國家地理HD</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4316>
+<span class="chnumber">220</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">BBCKnow</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4317>
+<span class="chnumber">221</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">BBCLife</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4318>
+<span class="chnumber">222</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FYI</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4319>
+<span class="chnumber">223</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">HISTORY</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4321>
+<span class="chnumber">225</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">History HD</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4412>
+<span class="chnumber">316</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">CNN 國際新聞</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4413>
+<span class="chnumber">317</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">HLN</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4414>
+<span class="chnumber">318</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Fox News</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4415>
+<span class="chnumber">319</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">CNBC</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4416>
+<span class="chnumber">320</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">BBC W N</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4417>
+<span class="chnumber">321</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">BLOOMBERG </span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4418>
+<span class="chnumber">322</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">亞洲新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4419>
+<span class="chnumber">323</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Sky News</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4421>
+<span class="chnumber">325</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">半島電視台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4422>
+<span class="chnumber">326</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">euronews</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4423>
+<span class="chnumber">327</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">France 24</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4427>
+<span class="chnumber">331</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now直播台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4428>
+<span class="chnumber">332</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4429>
+<span class="chnumber">333</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now財經台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4432>
+<span class="chnumber">336</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now報價台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4434>
+<span class="chnumber">338</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">第1財經</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4461>
+<span class="chnumber">365</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">DW</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4462>
+<span class="chnumber">366</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">鳳凰資訊台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4463>
+<span class="chnumber">367</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">鳳凰衛視香港台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4464>
+<span class="chnumber">368</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">香港衛視綜合台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4465>
+<span class="chnumber">369</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">中國新華電視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4466>
+<span class="chnumber">370</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">CCTV News</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4467>
+<span class="chnumber">371</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">東森亞洲新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4471>
+<span class="chnumber">375</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">交通頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4472>
+<span class="chnumber">376</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">天氣頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4473>
+<span class="chnumber">377</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">航班資訊</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4496>
+<span class="chnumber">400</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">智叻樂園</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4537>
+<span class="chnumber">441</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Disney</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4538>
+<span class="chnumber">442</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">DisneyJ</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4539>
+<span class="chnumber">443</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">卡通頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4540>
+<span class="chnumber">444</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Nickelodeon</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4541>
+<span class="chnumber">445</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Disc Kids</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4542>
+<span class="chnumber">446</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Toonami</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4543>
+<span class="chnumber">447</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">CBeebie</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4544>
+<span class="chnumber">448</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Baby TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4545>
+<span class="chnumber">449</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Nick Jr.</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4596>
+<span class="chnumber">500</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">MOOV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4597>
+<span class="chnumber">501</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now shop</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4598>
+<span class="chnumber">502</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">yp 502</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4601>
+<span class="chnumber">505</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Game</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4607>
+<span class="chnumber">511</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Animax</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4608>
+<span class="chnumber">512</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">AXN</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4609>
+<span class="chnumber">513</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">beTV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4610>
+<span class="chnumber">514</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">索尼台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4611>
+<span class="chnumber">515</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FOX</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4612>
+<span class="chnumber">516</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Li</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4613>
+<span class="chnumber">517</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">ITV Choice</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4614>
+<span class="chnumber">518</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">KIX</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4615>
+<span class="chnumber">519</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">WE tv</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4616>
+<span class="chnumber">520</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Lifetime</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4617>
+<span class="chnumber">521</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">The Indonesia CH</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4618>
+<span class="chnumber">522</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Universal Ch</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4619>
+<span class="chnumber">523</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FOXCRIME</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4620>
+<span class="chnumber">524</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FX</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4621>
+<span class="chnumber">525</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">CI</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4622>
+<span class="chnumber">526</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">channel M</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4623>
+<span class="chnumber">527</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">亞洲美食台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4624>
+<span class="chnumber">528</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">STAR WORLD</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4625>
+<span class="chnumber">529</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">BBC Ent</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4626>
+<span class="chnumber">530</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">華納電視頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4627>
+<span class="chnumber">531</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">E!</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4628>
+<span class="chnumber">532</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FashionFirst</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4629>
+<span class="chnumber">533</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">北京衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4630>
+<span class="chnumber">534</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">江蘇衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4631>
+<span class="chnumber">535</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">東森亞洲衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4632>
+<span class="chnumber">536</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">衛視中文台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4633>
+<span class="chnumber">537</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">珠江頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4634>
+<span class="chnumber">538</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">中天亞洲台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4635>
+<span class="chnumber">539</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">點心衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4636>
+<span class="chnumber">540</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">星空衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4637>
+<span class="chnumber">541</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Australia Plus TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4638>
+<span class="chnumber">542</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">CCTV-4</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4639>
+<span class="chnumber">543</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">南方衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4640>
+<span class="chnumber">544</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TBN</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4641>
+<span class="chnumber">545</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">創世電視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4642>
+<span class="chnumber">546</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">亞洲聯合衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4644>
+<span class="chnumber">548</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">鳳凰中文台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4645>
+<span class="chnumber">549</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">大愛電視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4646>
+<span class="chnumber">550</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">好消息2台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4647>
+<span class="chnumber">551</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">香港衛視精品台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4648>
+<span class="chnumber">552</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">亞太第一衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4650>
+<span class="chnumber">554</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">MTV LIVE</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4651>
+<span class="chnumber">555</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">[v] Int`l</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4652>
+<span class="chnumber">556</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">[v] China</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4653>
+<span class="chnumber">557</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">[v] 台灣</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4654>
+<span class="chnumber">558</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">KMTV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4655>
+<span class="chnumber">559</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">KBS World</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4667>
+<span class="chnumber">571</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">dbc 數碼1台 旗艦台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4668>
+<span class="chnumber">572</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">dbc 數碼2台 新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4669>
+<span class="chnumber">573</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">dbc 數碼3台 財經台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4670>
+<span class="chnumber">574</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">dbc 數碼4台 校園台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4671>
+<span class="chnumber">575</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">dbc 數碼5台 笑融台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4672>
+<span class="chnumber">576</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">dbc 數碼6台 音樂台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4673>
+<span class="chnumber">577</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">dbc 數碼7台 戲曲台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4716>
+<span class="chnumber">620</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">PLTV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4717>
+<span class="chnumber">621</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now 621</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4718>
+<span class="chnumber">622</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now 622</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4719>
+<span class="chnumber">623</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now 623</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4720>
+<span class="chnumber">624</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now 624</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4721>
+<span class="chnumber">625</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now 625</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4726>
+<span class="chnumber">630</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Sports Prime</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4727>
+<span class="chnumber">631</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Sports 1</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4728>
+<span class="chnumber">632</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Sports 2</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4729>
+<span class="chnumber">633</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Sports 3</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4730>
+<span class="chnumber">634</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Sports 4</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4731>
+<span class="chnumber">635</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Sports 5</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4732>
+<span class="chnumber">636</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Sports 6</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4733>
+<span class="chnumber">637</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Sports 7</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4734>
+<span class="chnumber">638</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Goal TV 1</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4735>
+<span class="chnumber">639</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Goal TV 2</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4736>
+<span class="chnumber">640</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">MUTV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4746>
+<span class="chnumber">650</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">IPL 2014</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4756>
+<span class="chnumber">660</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Sports HD</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4757>
+<span class="chnumber">661</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">SportsHDPlus</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4759>
+<span class="chnumber">663</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FOX SPT XTRA</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4760>
+<span class="chnumber">664</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">STARSport+</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4764>
+<span class="chnumber">668</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now668</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4765>
+<span class="chnumber">669</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">幸運88台 </span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4766>
+<span class="chnumber">670</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FOX SPORTS</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4767>
+<span class="chnumber">671</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FOX SPORTSu00a02</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4768>
+<span class="chnumber">672</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FOX SPORTS 3</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4769>
+<span class="chnumber">673</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FOX SPT NEWS</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4770>
+<span class="chnumber">674</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">STAR Cricket</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4771>
+<span class="chnumber">675</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">STAR CK XTRA</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4772>
+<span class="chnumber">676</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Eurosport</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4773>
+<span class="chnumber">677</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Eurosportnews</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4774>
+<span class="chnumber">678</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">NBA TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4775>
+<span class="chnumber">679</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Setanta Ch</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4776>
+<span class="chnumber">680</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">ASN</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4777>
+<span class="chnumber">681</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Sports 681</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4778>
+<span class="chnumber">682</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Golf 1</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4779>
+<span class="chnumber">683</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Golf 2</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4780>
+<span class="chnumber">684</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">now Golf 3</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4782>
+<span class="chnumber">686</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">RWC2011</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4806>
+<span class="chnumber">710</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">NHK World TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4807>
+<span class="chnumber">711</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">NHK Premium</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4810>
+<span class="chnumber">714</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TV5MONDE</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4811>
+<span class="chnumber">715</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">FRANCE24(Fr)</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4816>
+<span class="chnumber">720</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">GMA Pinoy TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4817>
+<span class="chnumber">721</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">GMA Life TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4876>
+<span class="chnumber">780</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">COLORS</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4877>
+<span class="chnumber">781</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">ZeeCinemaInt</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4889>
+<span class="chnumber">793</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Star Gold</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4890>
+<span class="chnumber">794</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">STAR Plus</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4891>
+<span class="chnumber">795</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">ABP News</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4892>
+<span class="chnumber">796</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">[v] 印度</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4893>
+<span class="chnumber">797</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Life OK</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4894>
+<span class="chnumber">798</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Star Vijay</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4897>
+<span class="chnumber">801</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB Window</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4898>
+<span class="chnumber">802</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB電影台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4899>
+<span class="chnumber">803</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB為食台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4900>
+<span class="chnumber">804</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB娛樂新聞</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4901>
+<span class="chnumber">805</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4902>
+<span class="chnumber">806</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB新聞2台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4903>
+<span class="chnumber">807</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">煲劇1台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4904>
+<span class="chnumber">808</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">煲劇2台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4905>
+<span class="chnumber">809</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB經典台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4906>
+<span class="chnumber">810</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB GoodShow</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4907>
+<span class="chnumber">811</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB兒童台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4908>
+<span class="chnumber">812</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">美亞電影台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4909>
+<span class="chnumber">813</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">無線衛星亞洲台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4910>
+<span class="chnumber">814</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">無線衛星新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4911>
+<span class="chnumber">815</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB8</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4912>
+<span class="chnumber">816</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB安哥台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4914>
+<span class="chnumber">818</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB體育台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4915>
+<span class="chnumber">819</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">19台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4916>
+<span class="chnumber">820</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB 高清體育台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4917>
+<span class="chnumber">821</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">冬奧1台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4918>
+<span class="chnumber">822</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">冬奧2台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4919>
+<span class="chnumber">823</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">冬奧3台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4920>
+<span class="chnumber">824</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">冬奧4台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4921>
+<span class="chnumber">825</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">冬奧5台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4922>
+<span class="chnumber">826</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">冬奧6台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4923>
+<span class="chnumber">827</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">冬奧速遞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4932>
+<span class="chnumber">836</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">神州新聞</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4935>
+<span class="chnumber">839</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">19台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4936>
+<span class="chnumber">840</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB體育台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4937>
+<span class="chnumber">841</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB Window</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4948>
+<span class="chnumber">852</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">深圳衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4950>
+<span class="chnumber">854</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">澳亞衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4994>
+<span class="chnumber">898</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">TVB資訊台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4997>
+<span class="chnumber">901</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">冰火頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4998>
+<span class="chnumber">902</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">見摩之頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=4999>
+<span class="chnumber">903</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">成人極品台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=5000>
+<span class="chnumber">904</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">Playboy TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=5001>
+<span class="chnumber">905</span>
+<span class="chlogo"><img src="images/channelListLogo_nowtv.png" alt="NowTV"></span>
+<span class="chname">5X成人台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8193>
+<span class="chnumber">001</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">有線電視第1台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8194>
+<span class="chnumber">002</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">樂這兒購物</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8198>
+<span class="chnumber">006</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">天氣台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8199>
+<span class="chnumber">007</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">重點新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8200>
+<span class="chnumber">008</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">財經資訊台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8201>
+<span class="chnumber">009</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8202>
+<span class="chnumber">010</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">直播新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8203>
+<span class="chnumber">011</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">兒童台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8204>
+<span class="chnumber">012</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">娛樂台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8205>
+<span class="chnumber">013</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">劇集台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8206>
+<span class="chnumber">014</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">鳳凰衛視香港台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8207>
+<span class="chnumber">015</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">創世電視台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8208>
+<span class="chnumber">016</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">卡通頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8209>
+<span class="chnumber">017</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">東森亞洲衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8210>
+<span class="chnumber">018</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">有線18台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8211>
+<span class="chnumber">019</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">澳門博覽台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8212>
+<span class="chnumber">020</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">鳯凰衛視中文台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8213>
+<span class="chnumber">021</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">東方衛視國際頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8214>
+<span class="chnumber">022</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">AXN</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8215>
+<span class="chnumber">023</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">中國旅遊與經濟台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8216>
+<span class="chnumber">024</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">遼寧衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8217>
+<span class="chnumber">025</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Animax</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8218>
+<span class="chnumber">026</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">深圳電視台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8219>
+<span class="chnumber">027</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">江蘇衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8220>
+<span class="chnumber">028</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Channel M</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8221>
+<span class="chnumber">029</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">香港衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8222>
+<span class="chnumber">030</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">TOONAMI</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8223>
+<span class="chnumber">031</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">索尼台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8224>
+<span class="chnumber">032</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">安徽衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8225>
+<span class="chnumber">033</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Fashion TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8226>
+<span class="chnumber">034</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">beTV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8227>
+<span class="chnumber">035</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">浙江衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8228>
+<span class="chnumber">036</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Comedy Central Asia</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8229>
+<span class="chnumber">037</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">MTV China</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8230>
+<span class="chnumber">038</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">湖北衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8231>
+<span class="chnumber">039</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">北京衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8232>
+<span class="chnumber">040</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">天津衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8233>
+<span class="chnumber">041</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">電影一台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8234>
+<span class="chnumber">042</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">電影二台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8235>
+<span class="chnumber">043</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">HMC</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8236>
+<span class="chnumber">044</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">驚慄電影台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8237>
+<span class="chnumber">045</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Cine p.</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8238>
+<span class="chnumber">046</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">MGM電影頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8239>
+<span class="chnumber">047</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">TCM</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8240>
+<span class="chnumber">048</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">驚慄電影台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8241>
+<span class="chnumber">049</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">BBC Knowledge</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8242>
+<span class="chnumber">050</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">國家地理野生頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8244>
+<span class="chnumber">052</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">國家地理頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8245>
+<span class="chnumber">053</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Discovery</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8246>
+<span class="chnumber">054</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">旅遊生活頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8247>
+<span class="chnumber">055</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">動物星球頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8248>
+<span class="chnumber">056</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">國家地理悠人頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8249>
+<span class="chnumber">057</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">EVE</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8250>
+<span class="chnumber">058</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Discovery科學頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8251>
+<span class="chnumber">059</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">DMAX</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8252>
+<span class="chnumber">060</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Sports Times</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8253>
+<span class="chnumber">061</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">足球台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8254>
+<span class="chnumber">062</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">有線體育台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8255>
+<span class="chnumber">063</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Ch63</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8256>
+<span class="chnumber">064</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">球彩台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8257>
+<span class="chnumber">065</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">賠率台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8258>
+<span class="chnumber">066</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">中國新華電視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8259>
+<span class="chnumber">067</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Russia Today</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8260>
+<span class="chnumber">068</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">半島電視台英語頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8261>
+<span class="chnumber">069</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">CNN HLN News</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8262>
+<span class="chnumber">070</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">中央電視台新聞頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8263>
+<span class="chnumber">071</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">中央電視台中文國際頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8264>
+<span class="chnumber">072</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">中央電視台英語新聞頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8265>
+<span class="chnumber">073</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">東森亞洲新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8266>
+<span class="chnumber">074</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">CNN</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8267>
+<span class="chnumber">075</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">BBC World News</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8268>
+<span class="chnumber">076</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">亞洲新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8269>
+<span class="chnumber">077</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Bloomberg TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8270>
+<span class="chnumber">078</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">CNBC HK</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8271>
+<span class="chnumber">079</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">鳳凰衛視資訊台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8285>
+<span class="chnumber">093</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">衛視中文台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8287>
+<span class="chnumber">095</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">中央電視台戲曲頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8288>
+<span class="chnumber">096</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">山東衛視</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8322>
+<span class="chnumber">130</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">BBC Entertainment</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8323>
+<span class="chnumber">131</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">BBC Lifestyle</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8324>
+<span class="chnumber">132</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">吉本東風</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8326>
+<span class="chnumber">134</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">JET TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8327>
+<span class="chnumber">135</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Disney Channel</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8328>
+<span class="chnumber">136</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Disney Junior</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8331>
+<span class="chnumber">139</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Nickelodeon</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8332>
+<span class="chnumber">140</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">CBeebies</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8333>
+<span class="chnumber">141</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">The Filipino Channel</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8336>
+<span class="chnumber">144</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Zee TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8337>
+<span class="chnumber">145</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Zee News</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8338>
+<span class="chnumber">146</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Zee Cinema</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8339>
+<span class="chnumber">147</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Zing</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8340>
+<span class="chnumber">148</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">NHK World Premium</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8342>
+<span class="chnumber">150</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Arirang TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8343>
+<span class="chnumber">151</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">DW-TV 亞洲頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8344>
+<span class="chnumber">152</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">TVE</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8345>
+<span class="chnumber">153</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Australia Network</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8346>
+<span class="chnumber">154</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">NHK World TV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8347>
+<span class="chnumber">155</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">RTPi</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8356>
+<span class="chnumber">164</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">All Sports Network</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8359>
+<span class="chnumber">167</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">TEN Cricket</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8360>
+<span class="chnumber">168</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">NEO CRICKET</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8372>
+<span class="chnumber">180</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">CAT 預告台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8373>
+<span class="chnumber">181</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">歡樂台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8374>
+<span class="chnumber">182</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">百厭妹</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8375>
+<span class="chnumber">183</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">千嬌台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8376>
+<span class="chnumber">184</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">宇宙台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8392>
+<span class="chnumber">200</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">高清亞運台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8393>
+<span class="chnumber">201</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">hd201</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8394>
+<span class="chnumber">202</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">hd202</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8395>
+<span class="chnumber">203</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">hd203</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8396>
+<span class="chnumber">204</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">hd204</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8399>
+<span class="chnumber">207</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">重點新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8400>
+<span class="chnumber">208</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">財經資訊台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8401>
+<span class="chnumber">209</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8402>
+<span class="chnumber">210</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">直播新聞台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8404>
+<span class="chnumber">212</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">高清娛樂台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8405>
+<span class="chnumber">213</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">高清劇集台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8410>
+<span class="chnumber">218</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">有線18台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8414>
+<span class="chnumber">222</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">AXN</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8417>
+<span class="chnumber">225</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Animax</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8420>
+<span class="chnumber">228</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Channel M HD</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8423>
+<span class="chnumber">231</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">索尼台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8425>
+<span class="chnumber">233</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Fashion TV HD</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8426>
+<span class="chnumber">234</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">beTV</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8428>
+<span class="chnumber">236</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Comedy Central Asia</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8429>
+<span class="chnumber">237</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">MTV China</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8433>
+<span class="chnumber">241</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">hd241</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8434>
+<span class="chnumber">242</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">電影二台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8435>
+<span class="chnumber">243</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">hd243</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8437>
+<span class="chnumber">245</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">hd245</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8440>
+<span class="chnumber">248</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">驚慄電影台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8441>
+<span class="chnumber">249</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">BBC Knowledge</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8442>
+<span class="chnumber">250</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">國家地理野生高清頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8444>
+<span class="chnumber">252</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">國家地理頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8445>
+<span class="chnumber">253</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">高清Discovery頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8446>
+<span class="chnumber">254</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">旅遊生活頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8447>
+<span class="chnumber">255</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">動物星球頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8448>
+<span class="chnumber">256</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">國家地理悠人頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8449>
+<span class="chnumber">257</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">EVE</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8450>
+<span class="chnumber">258</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Discovery科學頻道</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8451>
+<span class="chnumber">259</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">DMAX</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8452>
+<span class="chnumber">260</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Sports Times</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8453>
+<span class="chnumber">261</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">足球台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8454>
+<span class="chnumber">262</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">有線體育台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8455>
+<span class="chnumber">263</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Ch63</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8456>
+<span class="chnumber">264</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">球彩台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8457>
+<span class="chnumber">265</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">賠率台</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8492>
+<span class="chnumber">300</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Ch300</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8493>
+<span class="chnumber">301</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Ch301</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8494>
+<span class="chnumber">302</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Ch302</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8495>
+<span class="chnumber">303</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Ch303</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8496>
+<span class="chnumber">304</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Ch304</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8497>
+<span class="chnumber">305</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Ch305</span>
+</a>
+</li>
+<li>
+<a href=programme-list.php?channelsel=8693>
+<span class="chnumber">501</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">DBC數碼電台</span>
+</a>
+</li>
+<li class="last">
+<a href=programme-list.php?channelsel=8882>
+<span class="chnumber">690</span>
+<span class="chlogo"><img src="images/channelListLogo_cabletv.png" alt="CableTV"></span>
+<span class="chname">Ch690</span>
+</a>
+</li>
+</ul>
+<div id="footer"><a href=http://www.magictv.com/hk/zh-b5/index.html>&copy; 視科系統有限公司</a></div>
+</div>
+</body>
+</html>
